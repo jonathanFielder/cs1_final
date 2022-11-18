@@ -1,0 +1,212 @@
+Algorithm
+Comment
+Class header
+Class
+Attribute
+Method
+Method header
+Public
+Private
+Access Modifier
+Access Specifier
+Keyword
+Programmer-defined name
+Curly brace
+Class definition
+Method definition
+Semicolon
+Punctuation
+Syntax
+Statement
+String literal
+Length method
+Variable
+Integer literal
+Boolean literal
+Floating-point literal
+Character literal
+Special characters
+Print
+Println
+Printf
+API
+Console
+Terminal
+Standard output device
+System
+Escape Sequence
+Assignment statement
+Variable declaration
+Initialization
+Concatenate
+String concatenation operator
+Identifier
+Self-documenting program
+Argument
+Data type
+Primitive data type
+Byte
+Short
+Int
+Long
+Float
+Double
+Floating-point data types
+Floating-point numbers
+Strongly typed language
+Scientific Notation
+E Notation
+Boolean
+Char
+Unicode
+Assignment operator
+Integer division
+Unary
+Binary
+Ternary
+Negation operator
+Modulus
+Truncate
+Precedence
+Associativity
+Combined Assignment operators
+Compound operators
+Widening conversion
+Narrowing conversion
+Cast operator
+Final
+Named constants
+String
+Instance
+Primitive-type variable
+Class-type variable
+Object
+Scope
+Local variable
+Compiler
+Single-line comments
+Multiline comments
+Block comments
+Documentation comments
+Javadoc
+Author tag
+Version tag
+Param tag
+Return tag
+Programming style
+Scanner
+System.in
+New keyword
+Keyboard buffer
+String.format
+Format specifier
+Format String
+Conversion character
+Flags
+Boolean Flags
+Field width
+Precision
+Type char
+Minimum field width
+Padding
+Leading zeros
+Left justify
+Object-oriented programming
+Fields
+Reference variable
+Member
+Source code
+Parameter
+Return type
+Return statement
+Accessor method
+Getter
+Mutator method
+Setter
+Data hiding
+Stale data
+UML
+Passing arguments
+Passed by value
+Passed by reference
+Instance fields
+Instance methods
+Instance variables
+Constructor
+Default constructor
+Uninitialized reference variable
+No-argument constructor
+N-argument constructor
+Shadowing
+Import statement
+Package
+Explicit import
+Wildcard import
+Lazy import
+Sequence structure
+Decision structure
+If  statement
+If - else statement
+If - else if statement
+Relational operator
+Conditionally executed
+Boolean expression
+Equality operator
+Null statement
+Nested if statements
+Trailing else
+Hanging else
+Logical operator
+AND
+OR
+NOT
+Short circuiting
+Equals method
+CompareTo method
+EqualsIgnoreCase method
+CompareToIgnoreCase method
+Lexicographical comparison
+Switch statement
+Multiple alternative decision structure
+Semicolon
+Default case
+Break statement
+Fall through
+Decomposing an algorithm
+Implementation
+Random
+Increment
+Decrement
+Increment operator
+Decrement operator
+Prefix mode
+Postfix mode
+While loop
+Pretest loop
+Loop header
+Loop body
+Iteration
+Infinite loop
+Input validation
+Priming read
+Do - while loop
+Posttest loop
+User-controlled loop
+Conditional loop
+Count-controlled loop
+Initialization expression
+Test expression
+Update expression
+For loop
+Control variable
+Counter variable
+Running total
+Sentinel value
+Accumulator
+Nested loop
+Continue statement
+Debug
+Array
+Length field
+ArrayList
+Iteration
