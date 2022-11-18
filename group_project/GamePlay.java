@@ -5,15 +5,19 @@ import java.io.FileNotFoundException;
 /**
  * The Game class.
  *
- * @author (your name here)
- * @version (version or date)
+ * @author Jonathan Fielder
+ * @version 11/18/22
  */
 public class GamePlay
 {
     //Put constants here
 
     //Put instance variables here
-
+    private Glossary glossary;
+    private Random generator;
+    private Scanner keyboard;
+    private int correct;
+    private int incorrect;
     /**
      * No-arg GamePlay Constructor.
      *
