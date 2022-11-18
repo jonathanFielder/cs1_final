@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 public class GamePlay
 {
     //Put constants here
-
+    final int TEMO_LIST_COUNT = 4;
     //Put instance variables here
     private Glossary glossary;
     private Random generator;
@@ -24,7 +24,12 @@ public class GamePlay
      */
     public GamePlay() throws FileNotFoundException
     {
-        
+        glossary = new Glossary();
+        generator = new Random();
+        keyboard = new Scanner(System.in);
+        glossary.readFile("VocabList.txt");
+        correct = 0;
+        incorrect = 0;
     }
 
     /**
@@ -35,7 +40,12 @@ public class GamePlay
      */
     public GamePlay(String filename)
     {
-        
+        glossary = new Glossary();
+        generator = new Random();
+        keyboard = new Scanner(System.in);
+        glossary.readFile(filename);
+        correct = 0;
+        incorrect = 0;
     }
 
     /**
@@ -45,18 +55,34 @@ public class GamePlay
      */
     public void makeSelection(int selection)
     {
-       
+        switch (selection)
+        {
+            case 1: playLimitedGame(5);
+                break;   
+            case 2: playLimitedGame(20);
+                break;  
+            case 3: System.out.println("See ya next time");
+                break;  
+            default: System.out.println("out of bounds");
+        }
     }
-    
+
     /**
      * Method playRound.
      *
      */
     public void playRound()
     {
-        
+        //make temp array of consat size
+        //deside what index correct definition will be at randomly
+        //randomly select index in glossary to be term
+        //retrieve entry from glossary
+        //randomly select entries from glossary (no repeats) to fill rest of array
+        //call displayRound -> takes array and index that stores correct answer
+        //collect user's answer from keyboard
+        //check answer and increase respective field
     }
-    
+
     /**
      * Method playLimitedGame.
      *
@@ -64,18 +90,23 @@ public class GamePlay
      */
     public void playLimitedGame(int rounds)
     {
-        
+        int i = 0;
+        while (i < rounds)
+        {
+            playRound();
+            i++;
+        }
     }
-    
+
     /**
      * Method playContinuousGame.
      *
      */
     public void playContinuousGame()
     {
-        
+
     }
-    
+
     /**
      * Method displayRound.
      *
@@ -84,15 +115,16 @@ public class GamePlay
      */
     public void displayRound(Entry[] entries, int index)
     {
-        
+        System.out.println("Select the correct definition"
+            + " for the following term: ");
     }
-    
+
     /**
      * Method printResults.
      *
      */
     public void printResults()
     {
-       
+
     }
 }
