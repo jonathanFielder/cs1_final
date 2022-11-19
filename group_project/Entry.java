@@ -1,93 +1,82 @@
 /**
- * The Entry class.
+ * Entry.java
  * 
- * @author (your name here)
- * @version (version or date)
+ */
+
+
+//Put any imports below this line.
+ 
+ 
+/**
+ * Short, one-line description of Entry class here.
+ * 
+ * Optionally, include a paragraph that provides a more 
+ * detailed description.
+ *
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Entry
 {
+    //Put instance variables below this line.  
+    private String term;
+    private String definition;
+    
     /**
-     * No-arg constructor for objects of class Entry.
+     * No parameter constructor for objects of class Entry.
      */
     public Entry()
     {
         
     }
     
-    /**
-     * One-arg constructor for objects of class Entry.
-     */
     public Entry(String term)
     {
-              
+        this.term = term;
     }
     
-    /**
-     * Two-arg constructor for objects of class Entry.
-     */
     public Entry(String term, String definition)
     {
-        
+        this.term = term;
+        this.definition = definition;
     }
     
-    /**
-     * Method setTerm.
-     *
-     * @param term entry term
-     */
     public void setTerm(String term)
     {
-       
+        this.term = term;
     }
     
-    /**
-     * Method setDefinition.
-     *
-     * @param definition entry definition
-     */
     public void setDefinition(String definition)
     {
-        
+        this.definition = definition;
     }
     
-    /**
-     * Method getTerm.
-     *
-     * @return The entry term
-     */
     public String getTerm()
     {
-       return "";
+        return term;
     }
     
-    /**
-     * Method getDefinition.
-     *
-     * @return The entry definition
-     */
     public String getDefinition()
     {
-       return ""; 
-    }
-
-    /**
-     * Method toString.
-     *
-     * @return The string representation of entry
-     */
-    public String toString()
-    {
-        return "";
+        return definition;
     }
     
-    /**
-     * Method equals.
-     *
-     * @param entry entry to compare to
-     * @return true if this entry and param entry are the same
-     */
-    public boolean equals(Entry entry)
+    
+    public String toString()
     {
-       return false;
+        return term + " - " + definition + ".\n";
+    }
+    
+    public boolean equals(Entry obj)
+    {
+        if (obj == null)
+        {
+            return false;
+        }
+        if (obj == this)
+        {
+            return true;
+        }
+        return this.getDefinition().equals(obj.getDefinition());
     }
 }
