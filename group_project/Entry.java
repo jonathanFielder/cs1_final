@@ -13,8 +13,8 @@
  * Optionally, include a paragraph that provides a more 
  * detailed description.
  *
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Erik Page 
+ * @version 19/11/22
  */
 public class Entry
 {
