@@ -48,6 +48,25 @@ public class GamePlay
         incorrect = 0;
     }
 
+    // getters
+    /**
+     * returns correct.
+     * @return correct - int
+     */
+    public int getCorrect()
+    {
+        return correct;
+    }
+
+    /**
+     * returns incorrect.
+     * @return incorrect - int
+     */
+    public int getIncorrect()
+    {
+        return incorrect;
+    }
+
     /**
      * Method makeSelection.
      *
@@ -73,14 +92,63 @@ public class GamePlay
      */
     public void playRound()
     {
-        //make temp array of consat size
+        //make temp array of constant size
+        int constant = 4;
+        Entry[] tempArray = new Entry[constant];
+        int[] indexArray = new int[constant];
+        for (int q = 0; q < indexArray.length; q++)
+        {
+            indexArray[q] = -1; // inits confirmation array all to -1
+        }
         //deside what index correct definition will be at randomly
+        int correctIndex = generator.nextInt(constant);
         //randomly select index in glossary to be term
+        int termIndex = generator.nextInt(glossary.getNumEntries());
         //retrieve entry from glossary
+        Entry[] entries = glossary.getEntries();
+        tempArray[correctIndex] = entries[termIndex];
         //randomly select entries from glossary (no repeats) to fill rest of array
+        int i = 0;
+        int randomIndex = 0;
+        boolean pass = false;
+        while (i < tempArray.length)
+        {
+            // make sure i is not the correct answer space
+            if (i != correctIndex) 
+            {
+                pass = false;
+                while (pass = false)
+                {
+                    pass = true; // crack the door
+                    randomIndex = generator.nextInt(glossary.getNumEntries());
+                    for (int j = 0; j < indexArray.length; j++)
+                    {
+                        if (randomIndex == (indexArray[j]) || randomIndex == termIndex)
+                        {
+                            pass = false; // slam it closed
+                        }
+                    }
+                }
+                tempArray[i] = entries[randomIndex];
+                indexArray[i] = randomIndex; // saves used index
+            }
+            i++;
+        }
+
         //call displayRound -> takes array and index that stores correct answer
+        displayRound(tempArray, correctIndex);
         //collect user's answer from keyboard
+        int userAnswer = keyboard.nextInt();
+        keyboard.nextLine();
         //check answer and increase respective field
+        if (userAnswer - 1 == correctIndex)
+        {
+            correct += 1;
+        }
+        else
+        {
+            incorrect += 1;
+        }
     }
 
     /**
@@ -104,7 +172,15 @@ public class GamePlay
      */
     public void playContinuousGame()
     {
-
+        int cont = 0;
+        while(cont == 0)
+        {
+            playRound();
+            System.out.println("Would you like to play another round " 
+                + "(enter 0 to continue or -1 to quit)\t");
+            cont = keyboard.nextInt();
+            keyboard.nextLine();
+        }
     }
 
     /**
@@ -117,6 +193,11 @@ public class GamePlay
     {
         System.out.println("Select the correct definition"
             + " for the following term: ");
+        System.out.println(entries[index].getTerm());
+        for (int i = 0; i < entries.length; i++)
+        {
+            System.out.printf("%d %s%n", i+1, entries[i].getDefinition());
+        }
     }
 
     /**
@@ -125,6 +206,8 @@ public class GamePlay
      */
     public void printResults()
     {
-
+        System.out.printf("Correct:%t%-8d%nIncorrect:%t%-8d", 
+            getCorrect(), getIncorrect());
     }
+
 }
