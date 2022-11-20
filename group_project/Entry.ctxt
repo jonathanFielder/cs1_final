@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Entry
-comment0.text=\r\n\ The\ Entry\ class.\r\n\ \r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ or\ date)\r\n
+comment0.text=\r\n\ Short,\ one-line\ description\ of\ Entry\ class\ here.\r\n\ \r\n\ Optionally,\ include\ a\ paragraph\ that\ provides\ a\ more\ \r\n\ detailed\ description.\r\n\r\n\ @author\ Erik\ Page\ \r\n\ @version\ 19/11/22\r\n
 comment1.params=
 comment1.target=Entry()
 comment1.text=\r\n\ No-arg\ constructor\ for\ objects\ of\ class\ Entry.\r\n
