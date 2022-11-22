@@ -76,13 +76,15 @@ public class GamePlay
     {
         switch (selection)
         {
-            case 1: playLimitedGame(5);
+            case 1: System.out.print(glossary.toString());
+                break;
+            case 2: playLimitedGame(5);
                 break;   
-            case 2: playLimitedGame(20);
+            case 3: playLimitedGame(20);
                 break;  
-            case 3: System.out.println("See ya next time");
+            case 4: playContinuousGame();
                 break;  
-            default: System.out.println("out of bounds");
+            default: System.out.println("See ya next time");
         }
     }
 
@@ -94,8 +96,11 @@ public class GamePlay
     {
         //make temp array of constant size
         int constant = 4;
+        // array of entries that will be passed to displayRound()
         Entry[] tempArray = new Entry[constant];
+        // array that stores indexes that have been used from glossary in tempArray
         int[] indexArray = new int[constant];
+
         for (int q = 0; q < indexArray.length; q++)
         {
             indexArray[q] = -1; // inits confirmation array all to -1
@@ -105,8 +110,7 @@ public class GamePlay
         //randomly select index in glossary to be term
         int termIndex = generator.nextInt(glossary.getNumEntries());
         //retrieve entry from glossary
-        Entry[] entries = glossary.getEntries();
-        tempArray[correctIndex] = entries[termIndex];
+        tempArray[correctIndex] = glossary.getEntries()[termIndex];
         //randomly select entries from glossary (no repeats) to fill rest of array
         int i = 0;
         int randomIndex = 0;
@@ -116,21 +120,15 @@ public class GamePlay
             // make sure i is not the correct answer space
             if (i != correctIndex) 
             {
-                pass = false;
-                while (pass = false)
+                randomIndex = generator.nextInt(glossary.getNumEntries());
+                while (randomIndex == termIndex)
                 {
-                    pass = true; // crack the door
+                    // make sure random index is not same as answer index
                     randomIndex = generator.nextInt(glossary.getNumEntries());
-                    for (int j = 0; j < indexArray.length; j++)
-                    {
-                        if (randomIndex == (indexArray[j]) || randomIndex == termIndex)
-                        {
-                            pass = false; // slam it closed
-                        }
-                    }
                 }
-                tempArray[i] = entries[randomIndex];
-                indexArray[i] = randomIndex; // saves used index
+
+                tempArray[i] = glossary.getEntries()[randomIndex];
+
             }
             i++;
         }
@@ -149,6 +147,8 @@ public class GamePlay
         {
             incorrect += 1;
         }
+        //show how the round effected the score
+        printResults();
     }
 
     /**

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=VocabQuiz
-comment0.text=\r\n\ The\ VocabQuiz\ class.\r\n\ \r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ or\ date)\r\n
+comment0.text=\r\n\ The\ VocabQuiz\ class.\r\n\ \r\n\ @author\ Jonathan\ Fielder\r\n\ @version\ 11/22/22\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment1.text=\r\n\ Method\ main.\r\n\r\n\ @param\ args\ command\ line\ arguments\r\n
