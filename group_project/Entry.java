@@ -26,7 +26,9 @@ public class Entry
      */
     public Entry()
     {
-    
+        // edited to ensure no null return
+        term = "";
+        definition = "";
     }
     
     /**
