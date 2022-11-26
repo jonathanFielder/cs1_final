@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 public class GamePlay
 {
     //Put constants here
-    final int TEMO_LIST_COUNT = 4;
+    final int TEMP_LIST_COUNT = 4;
     //Put instance variables here
     private Glossary glossary;
     private Random generator;
@@ -94,28 +94,26 @@ public class GamePlay
      */
     public void playRound()
     {
-        //make temp array of constant size
-        int constant = 4;
         // array of entries that will be passed to displayRound()
-        Entry[] tempArray = new Entry[constant];
-        // array that stores indexes that have been used from glossary in tempArray
-        int[] indexArray = new int[constant];
+        Entry[] gameArray = new Entry[TEMP_LIST_COUNT];
+        // array that stores indexes that have been used from glossary in gameArray
+        int[] indexArray = new int[TEMP_LIST_COUNT];
 
         for (int q = 0; q < indexArray.length; q++)
         {
             indexArray[q] = -1; // inits confirmation array all to -1
         }
         //deside what index correct definition will be at randomly
-        int correctIndex = generator.nextInt(constant);
+        int correctIndex = generator.nextInt(TEMP_LIST_COUNT);
         //randomly select index in glossary to be term
         int termIndex = generator.nextInt(glossary.getNumEntries());
         //retrieve entry from glossary
-        tempArray[correctIndex] = glossary.getEntries()[termIndex];
+        gameArray[correctIndex] = glossary.getEntries()[termIndex];
         //randomly select entries from glossary (no repeats) to fill rest of array
         int i = 0;
         int randomIndex = 0;
         boolean pass = false;
-        while (i < tempArray.length)
+        while (i < gameArray.length)
         {
             // make sure i is not the correct answer space
             if (i != correctIndex) 
@@ -127,14 +125,14 @@ public class GamePlay
                     randomIndex = generator.nextInt(glossary.getNumEntries());
                 }
 
-                tempArray[i] = glossary.getEntries()[randomIndex];
+                gameArray[i] = glossary.getEntries()[randomIndex];
 
             }
             i++;
         }
 
         //call displayRound -> takes array and index that stores correct answer
-        displayRound(tempArray, correctIndex);
+        displayRound(gameArray, correctIndex);
         //collect user's answer from keyboard
         int userAnswer = keyboard.nextInt();
         keyboard.nextLine();
