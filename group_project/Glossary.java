@@ -1,24 +1,26 @@
 /**
-//Put required imports here
-
-/**
  * The Glossary class.
  *
- * @author (your name here)
- * @version (version or date)
+ * @author Sean Choi
+ * @version 11/18/22
  */
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 public class Glossary
 {
     //Put constants here
-
-    //Put instance variables here
+    final int WORD_COUNT = 210;
+    private int numEntries;
+    private Entry[] entries;
 
     /**
      * No-arg constructor for objects of class Glossary.
      */
     public Glossary()
     {
-
+        numEntries = 0;
+        entries = new Entry[WORD_COUNT];
     }
 
     /**
@@ -28,7 +30,8 @@ public class Glossary
      */
     public Glossary(int initialSize)
     {
-
+        numEntries = initialSize;
+        entries = new Entry[WORD_COUNT];
     }
 
     /**
@@ -38,7 +41,14 @@ public class Glossary
      */
     public int getNumEntries()
     {
-        return -1;
+        if (numEntries >= 1)
+        {
+            return numEntries;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     /**
@@ -48,7 +58,7 @@ public class Glossary
      */
     public Entry[] getEntries()
     {
-        return new Entry[0];
+        return entries;
     }
 
     /**
@@ -58,7 +68,21 @@ public class Glossary
      */
     public void readFile(String filename) 
     {
-
+        try
+        {
+            File file = new File(filename);
+            Scanner input = new Scanner(file);
+            while (input.hasNext())
+            {
+                String[] line = new String[2];
+                line = input.nextLine().split(": ");
+            }
+            input.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File Not Found.");
+        }
     }
 
     /**
@@ -68,6 +92,12 @@ public class Glossary
      */
     public void addEntry(Entry entry)
     {
+        if (numEntries == entries.length)
+        {
+            Entry[] largerEntries = new Entry[numEntries + 1];
+            entries = largerEntries;
+            entries[numEntries + 1] = entry;
+        }
 
     }
 
@@ -78,7 +108,13 @@ public class Glossary
      */
     public void removeEntry(String term)
     {
-
+        for (int i = 0; i < entries.length; i++)
+        {
+            if (entries[i].getTerm().equals(term) == true)
+            {
+                entries[i] = new Entry();
+            }
+        }
     }
 
     /**
@@ -88,6 +124,14 @@ public class Glossary
      */
     public String toString()
     {
-        return "";
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < entries.length; i++)
+        {
+            if (entries[i].getTerm() != null)
+            {
+                builder.append(entries[i].getTerm() +"\n");
+            }
+        }
+        return builder.toString();
     }
 }

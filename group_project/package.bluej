@@ -1,14 +1,14 @@
 #BlueJ package file
-dependency1.from=Glossary
-dependency1.to=Entry
+dependency1.from=GamePlay
+dependency1.to=Glossary
 dependency1.type=UsesDependency
-dependency2.from=VocabQuiz
-dependency2.to=GamePlay
+dependency2.from=GamePlay
+dependency2.to=Entry
 dependency2.type=UsesDependency
-dependency3.from=GamePlay
-dependency3.to=Glossary
+dependency3.from=VocabQuiz
+dependency3.to=GamePlay
 dependency3.type=UsesDependency
-dependency4.from=GamePlay
+dependency4.from=Glossary
 dependency4.to=Entry
 dependency4.type=UsesDependency
 editor.fx.0.height=867

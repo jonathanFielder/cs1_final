@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Glossary
-comment0.text=\r\n//Put\ required\ imports\ here\r\n\r\n/**\r\n\ The\ Glossary\ class.\r\n\r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ or\ date)\r\n
 comment1.params=
 comment1.target=Glossary()
 comment1.text=\r\n\ No-arg\ constructor\ for\ objects\ of\ class\ Glossary.\r\n
