@@ -1,0 +1,122 @@
+term: definition
+
+Iteration: a sequence of instructions or code being repeated until a specific end result is achieved
+
+ArrayList: a resizable array class, which can be found in the java.util package
+
+Length field:  a final variable applicable for arrays equal to the array's index length
+
+Array: a container object that holds a fixed number of values of a single type
+
+Debug: the routine process of locating and removing bugs, errors or abnormalities from programs
+
+Continue statement: breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop
+
+Nested loop: a (inner) loop that appears in the loop body of another (outer) loop
+
+Accumulator: similar to the counter, It is initialized to zero and is incremented in each repetition with different values
+Sentinel value: a special value in the context of an algorithm which uses its presence as a condition of termination, typically in a loop or recursive algorithm
+
+Running total: the summation of a sequence of numbers which is updated by adding the value of the new number to the previous running total
+
+Counter variable: a special type of variable which is used in the loop to count the repetitions a program variable that is used to regulate the flow of control of the program
+
+Control variable: a program variable that is used to regulate the flow of control of the program
+
+For loop: a repetition control structure that allows you to efficiently write a loop that needs to be executed a specific number of times
+
+Update expression: an expression that is used to update the attributes of an item
+
+Initialization expression: an expression that initializes the loop 
+
+Count-controlled loop: used when the number of iterations to occur is already known
+
+Conditional loop: a control flow statement that allows code to be executed repeatedly based on a given Boolean condition
+
+Posttest loop: A loop that tests the condition after each iteration
+
+Do - while loop: used to execute a block of statements continuously until the given condition is true
+
+Priming read: The first input operation - just before the loop
+
+Input validation: the process of testing input received by the application for compliance against a standard defined within the application
+
+Infinite loop: a sequence of instructions that loops indefinitely unless the system crashes
+
+Iteration: a technique used to sequence through a block of code repeatedly until a specific condition either exists or no longer exists
+
+Loop body: The statements inside the loop.
+
+Pretest loop: A loop that tests the condition before each iteration
+
+While loop: used to iterate a part of the program repeatedly until the specified Boolean condition is true
+
+Postfix mode: increment or decrement operator first returns the original value of the operand then increments the operand
+
+Prefix mode: increment or decrement operator first increments the operand then returns the new value of the operand
+
+Decrement operator: decreases the value of a variable by 1
+
+Increment operator: increases the value of a variable by 1
+
+Decrement: used to reduce the value of a variable by 1
+
+Increment: used to increase the value of a variable by 1
+
+Random: An instance of java Random class is used to generate random numbers
+
+Implementation: to recognize and use an element of code or a programming resource that is written into the program
+
+Decomposing an algorithm: the process of solving a complex problem and breaking it into more sub-problems that can be solved easily
+
+Fall through: a condition in which each case does not have any break statement
+
+Break statement: terminates the loop immediately, and the control of the program moves to the next statement following the loop
+
+Default case: can be used for performing a task when none of the cases are true
+
+Semicolon: a separator that is used to terminate a statement
+
+Multiple alternative decision structure: allows you to test the value of a variable or expression and then use that value to determine which statement or statements to execute
+
+Switch statement: a multi-way branch statement
+
+Lexicographical comparison: sorts the elements of the array by comparing each pair of elements in the formal order of alphabets, dates, or numbers
+
+CompareToIgnoreCase method: compares two strings lexicographically, ignoring lower case and upper case differences
+
+EqualsIgnoreCase method: compares two strings, ignoring lower case and upper case differences
+
+CompareTo method:  compares two strings lexicographically
+
+Equals method: compares two strings, and returns true if the strings are equal, and false if not
+
+Short circuiting: f the evaluation of a logical expression exits in between before complete evaluation
+
+Logical operator: used to check whether an expression is true or false
+
+Nested if statements: a set of if conditions one within another
+
+Null statement: an expression statement with the expression missing
+
+Equality operator: returns true if both the operands are referring to the same object, otherwise false
+
+Boolean expression: a Java expression that, when evaluated, returns a Boolean value: true or false
+
+Conditionally executed: define conditions that are true or false and then execute based on whether or not the condition is true
+
+Relational operator: used to comparing two variables for equality, non-equality, greater than, less than, etc
+
+If statement: Use if to specify a block of code to be executed, if a specified condition is true
+
+Decision structure: a construct in a computer program that allows the program to make a decision and change its behavior based on that decision
+
+Sequence structure: Unless directed otherwise, the computer executes Java statements one after the other in the order in which they're written
+
+Wildcard import: importing a package instead of declaring specific class names being used from a package
+
+Explicit import: Explicit means direct or when we give the proper path of the java class it will call as explicit import
+
+Shadowing: the practice of using variables in overlapping scopes with the same name where the variable in low-level scope overrides the variable of high-level scope
+
+
