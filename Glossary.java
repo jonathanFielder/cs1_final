@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Glossary
 {
     //Put constants here
-    final int WORD_COUNT = 210;
+    public static final int WORD_COUNT = 210;
     private int numEntries;
     private Entry[] entries;
 
@@ -30,8 +30,8 @@ public class Glossary
      */
     public Glossary(int initialSize)
     {
-        numEntries = initialSize;
-        entries = new Entry[WORD_COUNT];
+        numEntries = 0;
+        entries = new Entry[initialSize];
     }
 
     /**
@@ -41,14 +41,8 @@ public class Glossary
      */
     public int getNumEntries()
     {
-        if (numEntries >= 1)
-        {
-            return numEntries;
-        }
-        else
-        {
-            return 0;
-        }
+
+        return numEntries;
     }
 
     /**
@@ -74,9 +68,10 @@ public class Glossary
             Scanner input = new Scanner(file);
             while (input.hasNext())
             {
-                String[] line = new String[2];
-                line = input.nextLine().split(": ");
+                String[] line = input.nextLine().split(":");
+                addEntry(new Entry(line[0].trim(), line[1].trim()));
             }
+
             input.close();
         }
         catch (FileNotFoundException e)
@@ -92,15 +87,12 @@ public class Glossary
      */
     public void addEntry(Entry entry)
     {
-        if (numEntries == entries.length)
-        {
-            Entry[] largerEntries = new Entry[numEntries + 1];
-            entries = largerEntries;
-            entries[numEntries + 1] = entry;
-        }
+
+        entries[numEntries] = entry;
+        // check this
+        numEntries += 1;
 
     }
-
     /**
      * Method removeEntry.
      *
@@ -112,7 +104,8 @@ public class Glossary
         {
             if (entries[i].getTerm().equals(term) == true)
             {
-                entries[i] = new Entry();
+                //entries[i] = new Entry();
+                entries[i] = null;
             }
         }
     }
@@ -127,11 +120,12 @@ public class Glossary
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < entries.length; i++)
         {
-            if (entries[i].getTerm() != null)
+            if (entries[i] != null)
             {
-                builder.append(entries[i].getTerm() +"\n");
+                builder.append(entries[i].toString() +"\n");
             }
         }
         return builder.toString();
+
     }
 }
