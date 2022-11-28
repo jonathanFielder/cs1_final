@@ -93,6 +93,7 @@ public class Glossary
         numEntries += 1;
 
     }
+        
     /**
      * Method removeEntry.
      *
@@ -100,16 +101,36 @@ public class Glossary
      */
     public void removeEntry(String term)
     {
-        for (int i = 0; i < entries.length; i++)
+        int index = -1;
+        for (int i = 0; i < numEntries; i++)
         {
             if (entries[i].getTerm().equals(term) == true)
             {
-                //entries[i] = new Entry();
                 entries[i] = null;
+                index = i;                
+            }
+        }
+        numEntries--;
+        shift(index);
+    }
+
+    /**
+     * Shift index.
+     * 
+     * @param index - int
+     */
+    public void shift(int index)
+    {
+        if (index != -1)
+        {
+            for (int i = index; i < entries.length - 1; i++)
+            {
+                entries[i] = entries[i + 1];
             }
         }
     }
 
+    
     /**
      * Method toString.
      *

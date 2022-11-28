@@ -211,4 +211,19 @@ public class GamePlay
             getCorrect(), getIncorrect());
     }
 
+    public Glossary getGlossary()
+    {
+        return glossary;
+    }
+
+    public static void main(String[] args) throws FileNotFoundException
+    {
+        GamePlay gamePlay = new GamePlay("VocabList.txt");
+        System.out.println(gamePlay.getGlossary().toString());
+        System.out.println();
+        System.out.println("----------");
+        gamePlay.getGlossary().removeEntry("Shadowing");
+        System.out.println(gamePlay.getGlossary().toString());
+    }
+
 }
